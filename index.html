@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mamadou Lamine COULIBALY - Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/logo.png">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="description" content="Portfolio de Mamadou Lamine COULIBALY, Ingénieur Biomédical">
+</head>
+<body>
+    <div class="container" id="ACCUEIL">
+        <nav>
+            <h2 class="logo">Port<span class="blue">folio</span></h2>
+            <div class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="#ACCUEIL" style="--i:1;">ACCUEIL</a></li>
+                    <li><a href="#A-PROPOS" style="--i:2;">À PROPOS</a></li>
+                    <li><a href="#PROJETS" style="--i:3;">MES PROJETS</a></li>
+                    <li><a href="#COMPETENCES" style="--i:4;">MES COMPÉTENCES</a></li>
+                    <li><a href="#CERTIFICATIONS" style="--i:4;">MES CERTIFICATIONS</a></li>
+                    <li><a href="#CONTACT" style="--i:5;">CONTACT</a></li>
+                </ul>
+            </div>
+            <a href="#" class="Follow">Me suivre</a>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+        
+        <div class="content">
+            <div class="text">
+                <h4>Bonjour, je suis</h4>
+                <h1>Mamadou Lamine <span>COULIBALY</span></h1>
+                <h3><span>Ingénieur Biomédical | Informaticien</span></h3>
+                <p>Spécialisé en Ingénierie Biomédicale et la maintenance informatique</p>
+                <a class="cv" href="CV_MLC.pdf">TÉLÉCHARGER CV</a>
+            </div>
+            <div class="img"><img src="images/profile.png" alt="Photo de profil"></div>
+        </div>
+        <!--Section logo reséaux sociaux-->
+        <div class="social-media">
+            <a href="https://wa.me/+221774317187" target="_blank" style="--i:8;" aria-label="WhatsApp"><i class='bx bxl-whatsapp'></i>
+            <a href="mailto:mamadoulaminecoulibaly96@gmail.com" target="_blank" style="--i:7;" aria-label="Gmail"><i class='bx bxl-gmail'></i></a>
+            <a href="https://github.com/Mlamine09" target="_blank" style="--i:8;" aria-label="GitHub"><i class='bx bxl-github'></i></a>
+            <a href="https://www.linkedin.com/in/mamadou-lamine-coulibaly-5abb10351/" target="_blank" style="--i:10;" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+        </div>
+    </div>
+
+    <main>
+        <!-- Section À PROPOS -->
+        <!--
+        <section class="aboutme" id="A-PROPOS">
+            <div class="about-container">
+                <div class="img2">
+                    <img src="Mind map-rafiki.png" alt="Illustration à propos">
+                </div>
+                <div class="text2">
+                    <h2>À <span>PROPOS</span> de moi</h2>
+                    <p>Spécialisé en développement front-end avec une double compétence en ingénierie biomédicale. 
+                       Expérience dans la conception et le développement d'interfaces utilisateur innovantes utilisant 
+                       <span>HTML, CSS et JavaScript</span>, ainsi que <span>React.js</span>. 
+                       Mon objectif est de créer des expériences utilisateur uniques tout en développant constamment mes compétences 
+                       en suivant les dernières technologies et tendances du développement front-end.</p>
+                </div>
+            </div>
+        </section>
+         -->
+        <div id="about-section"></div>
+        <script>
+        fetch("about.html")
+        .then(response => response.text())
+        .then(data => {
+        document.getElementById("about-section").innerHTML = data;
+        });
+        </script>
+        <!-- Section PROJETS -->
+        <section class="projects" id="PROJETS">
+            <div class="heading">
+                <h2>Mes <span>Projets</span></h2>
+            </div>
+            <!--
+            <div class="projects-grid">
+                Projet 1
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="images/Projet.png" alt="Formulaire de connexion 2">
+                    </div>
+                    <div class="project-info">
+                        <h3>Détection et classification automatisée des maladies rétinienne à partir d'images OCT à l'aide de l'IA</h3>
+                        <p>Interface Graphique utilisateur</p>
+                        <a href="https://mayadasaeed.github.io/login-forms/login%20form%202/" target="_blank" class="project-link">Voir le projet</a>
+                    </div>
+                </div>
+            </div>
+            -->
+            <div class="projects-grid">
+        <!-- Projet 1 -->
+            <div class="project-card" data-project-id="project1">
+                <div class="project-img">
+                    <img src="images/Projet.png" alt="Projet de détection des maladies rétiniennes">
+                </div>
+                <div class="project-info">
+                    <h3>Détection et classification automatisée des maladies rétinienne à partir d'images OCT à l'aide de l'IA</h3>
+                    <p>Avec une Interface Graphique Utilisateur</p>
+                    <button class="project-link" onclick="openModal('project1')">Voir les détails</button>
+                </div>
+            </div>
+    </div>
+        </section>
+        <!-- Section COMPÉTENCES -->
+        <!--
+        <section class="skills" id="COMPETENCES">
+            <div class="title">
+                <h2>Mes <span>Compétences</span></h2>
+            </div>
+            
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Développement Front-End</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <img src="file_type_html_icon_130541.png" alt="HTML5">
+                            <span>HTML5</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="file_type_css_icon_130661.png" alt="CSS3">
+                            <span>CSS3</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="file_type_js_icon_130510.png" alt="JavaScript">
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Outils & Frameworks</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <img src="file_type_python_icon_130221.png" alt="Python">
+                            <span>Python</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="bootstrap-logo-shadow.png" alt="Bootstrap">
+                            <span>Bootstrap</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="canva_logo_icon_168459.png" alt="Canva">
+                            <span>Canva</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        -->
+        <div id="skills-section"></div>
+        <script>
+        fetch("skills.html")
+        .then(response => response.text())
+        .then(data => {
+        document.getElementById("skills-section").innerHTML = data;
+        });
+        </script>
+        </div>
+        <!--Section CERTIFICATIONS-->
+        <section class="certificat" id="CERTIFICATIONS">
+            <div class="certif">
+                <h2> Mes <span>Certifications</span></h2>
+            </div>
+            <div class="cert-grid">
+            <img src="images/Matlab onramp.jpg" class="cert">
+            <img src="images/Machine Learning Onramp.jpg" class="cert">
+            <img src="images/Deep Learning Onramp.jpg" class="cert">
+            <img src="images/Signal Processing Onramp.jpg" class="cert hidden">
+            <img src="images/Coursera HVLJCEIV8ET7.jpg" class="cert hidden">
+            <img src="images/Coursera YKY8VY8FEXR9.jpg" class="cert hidden">
+            </div>
+        <!--Sous section boutton-->
+            <button id="showMoreBtn">Voir plus</button>
+        </section>
+
+        <!-- Section CONTACT -->
+        <section class="contact" id="CONTACT">
+            <div class="contact-container">
+                <h2>Me <span>Contacter</span></h2>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class='bx bx-envelope'></i>
+                        <p>mamadoulaminecoulibaly96@gmail.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class='bx bx-phone'></i>
+                        <p>+221 77 431 71 87 <br>+223 90 81 91 52</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class='bx bx-map'></i>
+                        <p>Dakar, Sénégal</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Mamadou Lamine COULIBALY. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        // Menu hamburger pour mobile
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Fermer le menu quand on clique sur un lien
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Smooth scroll pour la navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+    <!-- Modal pour les détails du projet -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <h2 id="modal-title">Titre du projet</h2>
+                <div class="modal-img">
+                    <img id="modal-image" src="" alt="Image du projet">
+                </div>
+                <div class="modal-description">
+                    <h3>Description détaillée</h3>
+                    <p id="modal-description">Description du projet...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
